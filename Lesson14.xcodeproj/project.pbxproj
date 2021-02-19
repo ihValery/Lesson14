@@ -56,15 +56,23 @@
 		80D2B90725E01E2B002D8BB6 /* Lesson14 */ = {
 			isa = PBXGroup;
 			children = (
-				80D2B90825E01E2B002D8BB6 /* AppDelegate.swift */,
-				80D2B90A25E01E2B002D8BB6 /* SceneDelegate.swift */,
 				80D2B90C25E01E2B002D8BB6 /* ViewController.swift */,
 				80D2B90E25E01E2B002D8BB6 /* Main.storyboard */,
-				80D2B91125E01E2E002D8BB6 /* Assets.xcassets */,
-				80D2B91325E01E2E002D8BB6 /* LaunchScreen.storyboard */,
-				80D2B91625E01E2E002D8BB6 /* Info.plist */,
+				80D2B91F25E01EEB002D8BB6 /* System32 */,
 			);
 			path = Lesson14;
+			sourceTree = "<group>";
+		};
+		80D2B91F25E01EEB002D8BB6 /* System32 */ = {
+			isa = PBXGroup;
+			children = (
+				80D2B91625E01E2E002D8BB6 /* Info.plist */,
+				80D2B91325E01E2E002D8BB6 /* LaunchScreen.storyboard */,
+				80D2B91125E01E2E002D8BB6 /* Assets.xcassets */,
+				80D2B90A25E01E2B002D8BB6 /* SceneDelegate.swift */,
+				80D2B90825E01E2B002D8BB6 /* AppDelegate.swift */,
+			);
+			path = System32;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +296,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 879U287R5Q;
-				INFOPLIST_FILE = Lesson14/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Lesson14/System32/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,7 +304,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ihValery.Lesson14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -307,7 +315,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 879U287R5Q;
-				INFOPLIST_FILE = Lesson14/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Lesson14/System32/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -315,7 +323,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = ihValery.Lesson14;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
