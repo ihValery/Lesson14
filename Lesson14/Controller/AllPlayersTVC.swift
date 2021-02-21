@@ -4,13 +4,13 @@ class AllPlayersTVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var player = Player.createPlayer().sorted(by: { $0.name < $1.name })
+    var player = Player.createPlayer().sorted(by: { $0.rating > $1.rating })
+    
     let imegaView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         stretchableHeader()
-        
         // Do any additional setup after loading the view.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -62,6 +62,11 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
             let aboutVC = segue.destination as! AboutVC
             aboutVC.player = player[indexPath.row]
+    }
+    
+    @IBAction func unwindToGoHome(_ unwindSegue: UIStoryboardSegue) {
+        //let sourceViewController = unwindSegue.source
+        // Use data from the view controller which initiated the unwind segue
     }
     
     //Настройка анимации у растягивающего заголовка
