@@ -9,8 +9,7 @@
 /* Begin PBXBuildFile section */
 		8054473125E043B40015D936 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473025E043B40015D936 /* Player.swift */; };
 		8054473425E0FF380015D936 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473325E0FF380015D936 /* CustomTVC.swift */; };
-		8054473725E100310015D936 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473625E100310015D936 /* MainVC.swift */; };
-		807D866C25E02A1E00CB373B /* AllPlayersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D866B25E02A1E00CB373B /* AllPlayersTVC.swift */; };
+		8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473625E100310015D936 /* AllPlayersTVC.swift */; };
 		807D867125E0303A00CB373B /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D867025E0303A00CB373B /* AboutVC.swift */; };
 		807D867525E030C600CB373B /* DataPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D867425E030C600CB373B /* DataPlayers.swift */; };
 		80D2B90925E01E2B002D8BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2B90825E01E2B002D8BB6 /* AppDelegate.swift */; };
@@ -23,8 +22,7 @@
 /* Begin PBXFileReference section */
 		8054473025E043B40015D936 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		8054473325E0FF380015D936 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
-		8054473625E100310015D936 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
-		807D866B25E02A1E00CB373B /* AllPlayersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlayersTVC.swift; sourceTree = "<group>"; };
+		8054473625E100310015D936 /* AllPlayersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlayersTVC.swift; sourceTree = "<group>"; };
 		807D867025E0303A00CB373B /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		807D867425E030C600CB373B /* DataPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPlayers.swift; sourceTree = "<group>"; };
 		80D2B90525E01E2B002D8BB6 /* Lesson14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson14.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +45,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8054475325E1A2640015D936 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				807D867425E030C600CB373B /* DataPlayers.swift */,
+				8054473025E043B40015D936 /* Player.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8054475525E1A27F0015D936 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8054473625E100310015D936 /* AllPlayersTVC.swift */,
+				807D867025E0303A00CB373B /* AboutVC.swift */,
+				8054473325E0FF380015D936 /* CustomTVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8054475625E1A29F0015D936 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				80D2B90E25E01E2B002D8BB6 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		80D2B8FC25E01E2B002D8BB6 = {
 			isa = PBXGroup;
 			children = (
@@ -66,13 +91,9 @@
 		80D2B90725E01E2B002D8BB6 /* Lesson14 */ = {
 			isa = PBXGroup;
 			children = (
-				807D867025E0303A00CB373B /* AboutVC.swift */,
-				807D867425E030C600CB373B /* DataPlayers.swift */,
-				807D866B25E02A1E00CB373B /* AllPlayersTVC.swift */,
-				8054473025E043B40015D936 /* Player.swift */,
-				80D2B90E25E01E2B002D8BB6 /* Main.storyboard */,
-				8054473325E0FF380015D936 /* CustomTVC.swift */,
-				8054473625E100310015D936 /* MainVC.swift */,
+				8054475325E1A2640015D936 /* Model */,
+				8054475625E1A29F0015D936 /* View */,
+				8054475525E1A27F0015D936 /* Controller */,
 				80D2B91F25E01EEB002D8BB6 /* System32 */,
 			);
 			path = Lesson14;
@@ -161,13 +182,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				807D867125E0303A00CB373B /* AboutVC.swift in Sources */,
-				807D866C25E02A1E00CB373B /* AllPlayersTVC.swift in Sources */,
 				80D2B90925E01E2B002D8BB6 /* AppDelegate.swift in Sources */,
 				807D867525E030C600CB373B /* DataPlayers.swift in Sources */,
 				8054473125E043B40015D936 /* Player.swift in Sources */,
 				80D2B90B25E01E2B002D8BB6 /* SceneDelegate.swift in Sources */,
 				8054473425E0FF380015D936 /* CustomTVC.swift in Sources */,
-				8054473725E100310015D936 /* MainVC.swift in Sources */,
+				8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
