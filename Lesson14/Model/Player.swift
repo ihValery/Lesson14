@@ -7,7 +7,7 @@ struct Player {
     let number: Int
     let proFile: String
     let team: String
-    let review: String
+    let review: [String]
     
     static func createPlayer() -> [Player] {
         var playerS: [Player] = []

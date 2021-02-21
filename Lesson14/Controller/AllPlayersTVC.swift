@@ -10,6 +10,7 @@ class AllPlayersTVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stretchableHeader()
+        
         // Do any additional setup after loading the view.
         //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }

@@ -15,10 +15,14 @@ class AboutVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         creatAboutCard()
-        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let reviewsVC = segue.destination as! ReviewVC
+        reviewsVC.player = player
+    }
+    
     @IBAction func backAction() {
         navigationController?.popViewController(animated: true)
     }
@@ -30,7 +34,6 @@ class AboutVC: UIViewController {
         numberPlayer.text = String(player.number)
         proFilePlayer.text = player.proFile
         logoTeam.image = UIImage(named: String(player.team))
-        viewReviewsBttn.setTitle("View review (\(player.review) reviews)", for: .normal)
-
+        viewReviewsBttn.setTitle("View review (\(player.review.count) reviews)", for: .normal)
     }
 }

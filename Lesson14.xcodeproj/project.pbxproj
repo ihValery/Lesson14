@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		804E179D25E243FE005E6A70 /* Forever Freedom Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 804E179C25E243FE005E6A70 /* Forever Freedom Outline.ttf */; };
 		804E17A025E24480005E6A70 /* Forever Freedom Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 804E179F25E24480005E6A70 /* Forever Freedom Regular.ttf */; };
-		804E17AF25E27C08005E6A70 /* ReviewsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804E17AE25E27C08005E6A70 /* ReviewsTVC.swift */; };
+		8051CD9425E2925600D374C0 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051CD9325E2925600D374C0 /* Reviews.swift */; };
+		8051CD9C25E2B4FA00D374C0 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */; };
 		8054473125E043B40015D936 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473025E043B40015D936 /* Player.swift */; };
 		8054473425E0FF380015D936 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473325E0FF380015D936 /* CustomTVC.swift */; };
 		8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473625E100310015D936 /* AllPlayersTVC.swift */; };
@@ -25,7 +26,8 @@
 /* Begin PBXFileReference section */
 		804E179C25E243FE005E6A70 /* Forever Freedom Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Forever Freedom Outline.ttf"; path = "../../../../../../Downloads/Forever Freedom/4. Regular Outline/Forever Freedom Outline.ttf"; sourceTree = "<group>"; };
 		804E179F25E24480005E6A70 /* Forever Freedom Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Forever Freedom Regular.ttf"; path = "../../../../../../Downloads/Forever Freedom/2. Regular/Forever Freedom Regular.ttf"; sourceTree = "<group>"; };
-		804E17AE25E27C08005E6A70 /* ReviewsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsTVC.swift; sourceTree = "<group>"; };
+		8051CD9325E2925600D374C0 /* Reviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
+		8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		8054473025E043B40015D936 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		8054473325E0FF380015D936 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
 		8054473625E100310015D936 /* AllPlayersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlayersTVC.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				807D867425E030C600CB373B /* DataPlayers.swift */,
 				8054473025E043B40015D936 /* Player.swift */,
+				8051CD9325E2925600D374C0 /* Reviews.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -64,9 +67,9 @@
 			isa = PBXGroup;
 			children = (
 				8054473625E100310015D936 /* AllPlayersTVC.swift */,
+				8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */,
 				807D867025E0303A00CB373B /* AboutVC.swift */,
 				8054473325E0FF380015D936 /* CustomTVC.swift */,
-				804E17AE25E27C08005E6A70 /* ReviewsTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,11 +196,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				807D867125E0303A00CB373B /* AboutVC.swift in Sources */,
+				8051CD9C25E2B4FA00D374C0 /* ReviewVC.swift in Sources */,
 				80D2B90925E01E2B002D8BB6 /* AppDelegate.swift in Sources */,
 				807D867525E030C600CB373B /* DataPlayers.swift in Sources */,
 				8054473125E043B40015D936 /* Player.swift in Sources */,
 				80D2B90B25E01E2B002D8BB6 /* SceneDelegate.swift in Sources */,
-				804E17AF25E27C08005E6A70 /* ReviewsTVC.swift in Sources */,
+				8051CD9425E2925600D374C0 /* Reviews.swift in Sources */,
 				8054473425E0FF380015D936 /* CustomTVC.swift in Sources */,
 				8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */,
 			);

@@ -97,9 +97,9 @@
                                     <constraint firstAttribute="height" constant="40" id="3x1-uC-Hnv"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="View reviews (8)"/>
+                                <state key="normal" title="View reviews"/>
                                 <connections>
-                                    <action selector="backAction" destination="ne3-oC-k07" eventType="touchUpInside" id="abc-IH-73t"/>
+                                    <segue destination="FEB-yB-TY7" kind="show" id="ft9-xB-PUX"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -147,50 +147,66 @@
             </objects>
             <point key="canvasLocation" x="1600" y="133.64928909952607"/>
         </scene>
-        <!--ReviewsTVC-->
-        <scene sceneID="VC5-VW-7Jt">
-            <objects>
-                <tableViewController storyboardIdentifier="ReviewsSB" id="ipo-Zf-yUr" customClass="ReviewsTVC" customModule="Lesson14" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Tn6-yA-BRT">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Qc4-ft-ndT">
-                                <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qc4-ft-ndT" id="j3i-y7-rdd">
-                                    <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="ipo-Zf-yUr" id="Nhg-es-Ced"/>
-                            <outlet property="delegate" destination="ipo-Zf-yUr" id="uZL-eX-asu"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Fb-cv-vTh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2442" y="574"/>
-        </scene>
-        <!--View Controller-->
+        <!--ReviewVC-->
         <scene sceneID="gKj-eq-Jps">
             <objects>
-                <viewController id="FEB-yB-TY7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReviewSB" id="FEB-yB-TY7" customClass="ReviewVC" customModule="Lesson14" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JrU-FE-Bwx">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-ar-bdb">
+                                <rect key="frame" x="0.0" y="44" width="390" height="676"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellReview" id="Q61-aY-4DB">
+                                        <rect key="frame" x="0.0" y="28" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q61-aY-4DB" id="UYW-4D-e5t">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FEB-yB-TY7" id="oY1-bz-SCZ"/>
+                                    <outlet property="delegate" destination="FEB-yB-TY7" id="mlj-Td-U55"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DV6-Cj-EY1">
+                                <rect key="frame" x="25" y="745" width="340" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="lbO-b4-9gS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButtonAction" destination="FEB-yB-TY7" eventType="touchUpInside" id="zRF-hU-A9N"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="mn7-Eb-vGe"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DV6-Cj-EY1" firstAttribute="leading" secondItem="mn7-Eb-vGe" secondAttribute="leading" constant="25" id="6wJ-Mi-G5G"/>
+                            <constraint firstItem="zAn-ar-bdb" firstAttribute="top" secondItem="JrU-FE-Bwx" secondAttribute="top" constant="44" id="KkG-I6-4vC"/>
+                            <constraint firstItem="mn7-Eb-vGe" firstAttribute="trailing" secondItem="zAn-ar-bdb" secondAttribute="trailing" id="Kzk-xf-bfI"/>
+                            <constraint firstItem="mn7-Eb-vGe" firstAttribute="bottom" secondItem="DV6-Cj-EY1" secondAttribute="bottom" constant="25" id="TrF-ze-6Jn"/>
+                            <constraint firstItem="zAn-ar-bdb" firstAttribute="leading" secondItem="mn7-Eb-vGe" secondAttribute="leading" id="Wxg-CV-yHB"/>
+                            <constraint firstItem="DV6-Cj-EY1" firstAttribute="top" secondItem="zAn-ar-bdb" secondAttribute="bottom" constant="25" id="m7z-HL-hrJ"/>
+                            <constraint firstItem="mn7-Eb-vGe" firstAttribute="trailing" secondItem="DV6-Cj-EY1" secondAttribute="trailing" constant="25" id="w74-U0-tMA"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="i3y-JL-QoN"/>
+                    <connections>
+                        <outlet property="tableReview" destination="zAn-ar-bdb" id="JXe-SE-QEQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbU-Eg-xXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2442" y="-119"/>
+            <point key="canvasLocation" x="2467.6923076923076" y="606.39810426540282"/>
         </scene>
-        <!--tets-->
+        <!--All PlayersTVC-->
         <scene sceneID="182-pi-LS8">
             <objects>
                 <viewController id="hv8-Sp-Ve7" customClass="AllPlayersTVC" customModule="Lesson14" customModuleProvider="target" sceneMemberID="viewController">
@@ -228,7 +244,7 @@
                             <constraint firstItem="6Es-eK-ek6" firstAttribute="trailing" secondItem="tVW-Qw-nM9" secondAttribute="trailing" id="zsm-eJ-jm2"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="tets" id="kyH-6l-zmJ"/>
+                    <navigationItem key="navigationItem" id="kyH-6l-zmJ"/>
                     <connections>
                         <outlet property="tableView" destination="tVW-Qw-nM9" id="aiH-G0-Jvq"/>
                     </connections>
