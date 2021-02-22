@@ -3,6 +3,8 @@ import UIKit
 class ReviewVC: UIViewController {
 
     @IBOutlet weak var tableReview: UITableView!
+    @IBOutlet var myButton: UIButton!
+    @IBOutlet var myView: UIView!
     
     var player: Player!
     let imegaView = UIImageView()
@@ -10,9 +12,30 @@ class ReviewVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stretchableHeader()
+        setMyDesignButton()
     }
+    
     @IBAction func backButtonAction() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func setMyDesignButton() {
+        // Создание градиентного слоя
+        let gradient = CAGradientLayer()
+        // Градиентные цвета в том порядке, в котором они будут визуально отображаться
+        gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+        // Градиент слева направо
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        // Установка градиентного слоя того же размера, что и myView
+        gradient.frame = myView.bounds
+        // Добавление градиентного слоя к слою myView для рендеринга
+        myView.layer.insertSublayer(gradient, at: 0)
+        // Волшебство! Установка кнопки в качестве маски myView
+        myView.mask = myButton
+        // Установка радиуса угла и ширины границы кнопки
+        myButton.layer.cornerRadius = myButton.frame.size.height / 2
+        myButton.layer.borderWidth = 2.0
     }
     
     //Настройка анимации у растягивающего заголовка

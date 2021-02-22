@@ -11,12 +11,20 @@ class AboutVC: UIViewController {
     @IBOutlet weak var viewReviewsBttn: UIButton!
     @IBOutlet weak var ratingPlayer: UILabel!
     
+    @IBOutlet var myView: UIView!
+    @IBOutlet var myView2: UIView!
+    @IBOutlet var myStackView: UIStackView!
+    @IBOutlet var myButtonRatingDesign: UIButton!
+    @IBOutlet var myButtonBackDesign: UIButton!
+    
+    
     //Мы сюда перейдем при условии что player будет
     var player: Player!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         creatAboutCard()
+        //setMyDesignButton()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -54,7 +62,33 @@ class AboutVC: UIViewController {
         player.review.append(String(Int.random(in: 1...10)))
         player.name = "QWERTY"
         ratingPlayer.text = player.review.last
-    
-        
     }
+    
+    /*
+    func setMyDesignButton() {
+        // Создание градиентного слоя
+        let gradient = CAGradientLayer()
+        // Градиентные цвета в том порядке, в котором они будут визуально отображаться
+        gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+        // Градиент слева направо
+        gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
+        // Установка градиентного слоя того же размера, что и myView
+        gradient.frame = myStackView.bounds
+        // Добавление градиентного слоя к слою myView для рендеринга
+        myStackView.layer.insertSublayer(gradient, at: 0)
+        // Волшебство! Установка кнопки в качестве маски myView
+        myStackView.mask = surNamePlayer
+//        myView.mask = myButtonRatingDesign
+//        myView.mask = myButtonBackDesign
+        // Установка радиуса угла и ширины границы кнопки
+//        viewReviewsBttn.layer.cornerRadius = viewReviewsBttn.frame.size.height / 2
+//        viewReviewsBttn.layer.borderWidth = 2.0
+//        myButtonRatingDesign.layer.cornerRadius = myButtonRatingDesign.frame.size.height / 2
+//        myButtonRatingDesign.layer.borderWidth = 2.0
+//        myButtonBackDesign.layer.cornerRadius = myButtonBackDesign.frame.size.height / 2
+//        myButtonBackDesign.layer.borderWidth = 2.0
+    }
+    */
+    
 }

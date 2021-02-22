@@ -2,6 +2,7 @@ import UIKit
 
 class AllPlayersTVC: UIViewController {
 
+    @IBOutlet var myLabelForCell: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var player = Player.createPlayer().sorted(by: { $0.rating > $1.rating })
@@ -37,10 +38,11 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
     
     //Настройка ячейки (Предоставьте объект ячейки для каждой строки) (сравниваем с работой цикла for-in)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! myCustomTableViewCell
         
         let tempIndex = player[indexPath.row]
-        cell.textLabel?.text = tempIndex.name + " " + tempIndex.surName
+        cell.myLabelForCell?.text = tempIndex.name
+        cell.myLabelForsurName.text = tempIndex.surName
         cell.imageView?.image = UIImage(named: tempIndex.avatar)
         return cell
     }
@@ -59,7 +61,7 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
     // Передать выбранный объект новому контроллеру вида.
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //indexPathForSelectedRow берет индекc у выделенной ячейки (опционал)
-        guard let indexPath = tableView.indexPathForSelectedRow else { return }
+        guard let indexPath = tableView.indexPathForSelectedRow  else { return }
             let aboutVC = segue.destination as! AboutVC
             aboutVC.player = player[indexPath.row]
     }
@@ -83,14 +85,4 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
         //Убираем лишнюю разлиновку в таблице
         tableView.tableFooterView = UIView()
     }
-    
-    /*
-    //Сразу маленькая картинка и вытягивается (пружина)
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        
-        tableView.scrollIndicatorInsets = view.safeAreaInsets
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: view.safeAreaInsets.bottom, right: 0)
-    }
-    */
 }

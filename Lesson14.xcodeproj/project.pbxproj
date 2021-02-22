@@ -8,13 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		804E179D25E243FE005E6A70 /* Forever Freedom Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 804E179C25E243FE005E6A70 /* Forever Freedom Outline.ttf */; };
-		804E17A025E24480005E6A70 /* Forever Freedom Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 804E179F25E24480005E6A70 /* Forever Freedom Regular.ttf */; };
 		8051CD9425E2925600D374C0 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051CD9325E2925600D374C0 /* Reviews.swift */; };
 		8051CD9C25E2B4FA00D374C0 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */; };
 		8051CDA125E2CABA00D374C0 /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051CDA025E2CABA00D374C0 /* RatingVC.swift */; };
 		8054473125E043B40015D936 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473025E043B40015D936 /* Player.swift */; };
-		8054473425E0FF380015D936 /* CustomTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473325E0FF380015D936 /* CustomTVC.swift */; };
 		8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473625E100310015D936 /* AllPlayersTVC.swift */; };
+		8056E5B125E323DD00601BE2 /* Forever Freedom Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 804E179F25E24480005E6A70 /* Forever Freedom Regular.ttf */; };
+		8056E5B425E3269300601BE2 /* myCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8056E5B325E3269300601BE2 /* myCustomTableViewCell.swift */; };
 		807D867125E0303A00CB373B /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D867025E0303A00CB373B /* AboutVC.swift */; };
 		807D867525E030C600CB373B /* DataPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D867425E030C600CB373B /* DataPlayers.swift */; };
 		80D2B90925E01E2B002D8BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D2B90825E01E2B002D8BB6 /* AppDelegate.swift */; };
@@ -31,8 +31,8 @@
 		8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		8051CDA025E2CABA00D374C0 /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		8054473025E043B40015D936 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		8054473325E0FF380015D936 /* CustomTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVC.swift; sourceTree = "<group>"; };
 		8054473625E100310015D936 /* AllPlayersTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllPlayersTVC.swift; sourceTree = "<group>"; };
+		8056E5B325E3269300601BE2 /* myCustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myCustomTableViewCell.swift; sourceTree = "<group>"; };
 		807D867025E0303A00CB373B /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		807D867425E030C600CB373B /* DataPlayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPlayers.swift; sourceTree = "<group>"; };
 		80D2B90525E01E2B002D8BB6 /* Lesson14.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson14.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -69,10 +69,10 @@
 			isa = PBXGroup;
 			children = (
 				8054473625E100310015D936 /* AllPlayersTVC.swift */,
+				8056E5B325E3269300601BE2 /* myCustomTableViewCell.swift */,
 				8051CDA025E2CABA00D374C0 /* RatingVC.swift */,
 				8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */,
 				807D867025E0303A00CB373B /* AboutVC.swift */,
-				8054473325E0FF380015D936 /* CustomTVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -183,7 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				804E17A025E24480005E6A70 /* Forever Freedom Regular.ttf in Resources */,
+				8056E5B125E323DD00601BE2 /* Forever Freedom Regular.ttf in Resources */,
 				80D2B91525E01E2E002D8BB6 /* LaunchScreen.storyboard in Resources */,
 				80D2B91225E01E2E002D8BB6 /* Assets.xcassets in Resources */,
 				804E179D25E243FE005E6A70 /* Forever Freedom Outline.ttf in Resources */,
@@ -206,7 +206,7 @@
 				80D2B90B25E01E2B002D8BB6 /* SceneDelegate.swift in Sources */,
 				8051CD9425E2925600D374C0 /* Reviews.swift in Sources */,
 				8051CDA125E2CABA00D374C0 /* RatingVC.swift in Sources */,
-				8054473425E0FF380015D936 /* CustomTVC.swift in Sources */,
+				8056E5B425E3269300601BE2 /* myCustomTableViewCell.swift in Sources */,
 				8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
