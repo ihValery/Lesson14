@@ -6,4 +6,4 @@
 - Добавление отзыва
 - Установка рейтинга
 
-[url=https://ibb.co/xs5VF6h][img]https://i.ibb.co/rtyndHk/Simulator-Screen-Shot-i-Phone-12-Pro-2021-02-22-at-16-51-09.png[/img][/url]
+<a href="https://ibb.co/xs5VF6h"><img src="https://i.ibb.co/rtyndHk/Simulator-Screen-Shot-i-Phone-12-Pro-2021-02-22-at-16-51-09.png" alt="Simulator-Screen-Shot-i-Phone-12-Pro-2021-02-22-at-16-51-09" border="0"></a>
