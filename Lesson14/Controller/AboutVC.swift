@@ -8,15 +8,16 @@ class AboutVC: UIViewController {
     @IBOutlet weak var numberPlayer: UILabel!
     @IBOutlet weak var proFilePlayer: UILabel!
     @IBOutlet weak var logoTeam: UIImageView!
-    @IBOutlet weak var viewReviewsBttn: UIButton!
     @IBOutlet weak var ratingPlayer: UILabel!
     
-    @IBOutlet var myView: UIView!
-    @IBOutlet var myView2: UIView!
-    @IBOutlet var myStackView: UIStackView!
-    @IBOutlet var myButtonRatingDesign: UIButton!
-    @IBOutlet var myButtonBackDesign: UIButton!
+    @IBOutlet weak var viewReviewsBttn: UIButton!
+    @IBOutlet weak var leaveRatingBttn: UIButton!
+    @IBOutlet weak var BackBttn: UIButton!
     
+    @IBOutlet weak var viewDesignOne: UIView!
+    @IBOutlet weak var viewDesignTwo: UIView!
+    @IBOutlet weak var viewDesignThree: UIView!
+  
     
     //Мы сюда перейдем при условии что player будет
     var player: Player!
@@ -24,7 +25,15 @@ class AboutVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         creatAboutCard()
-        //setMyDesignButton()
+    
+        viewReviewsBttn.layer.cornerRadius = 13
+        viewReviewsBttn.layer.borderWidth = 2
+        leaveRatingBttn.layer.cornerRadius = 13
+        leaveRatingBttn.layer.borderWidth = 2
+        
+//        setMyDesignBttnTwo()
+//        setMyDesignButton()
+        setMyDesignBttnThree()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,38 +66,49 @@ class AboutVC: UIViewController {
         viewReviewsBttn.setTitle("View review (\(player.review.count) reviews)", for: .normal)
         ratingPlayer.text = String(Array(repeating: "🏀", count: player.rating))
     }
+    
     @IBAction func randomAction(_ sender: UIButton) {
-        
         player.review.append(String(Int.random(in: 1...10)))
         player.name = "QWERTY"
         ratingPlayer.text = player.review.last
     }
     
-    /*
     func setMyDesignButton() {
-        // Создание градиентного слоя
+        //Все коментарии в SnippetsLab
         let gradient = CAGradientLayer()
-        // Градиентные цвета в том порядке, в котором они будут визуально отображаться
         gradient.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
-        // Градиент слева направо
         gradient.startPoint = CGPoint(x: 0.0, y: 0.5)
         gradient.endPoint = CGPoint(x: 1.0, y: 0.5)
-        // Установка градиентного слоя того же размера, что и myView
-        gradient.frame = myStackView.bounds
-        // Добавление градиентного слоя к слою myView для рендеринга
-        myStackView.layer.insertSublayer(gradient, at: 0)
-        // Волшебство! Установка кнопки в качестве маски myView
-        myStackView.mask = surNamePlayer
-//        myView.mask = myButtonRatingDesign
-//        myView.mask = myButtonBackDesign
-        // Установка радиуса угла и ширины границы кнопки
-//        viewReviewsBttn.layer.cornerRadius = viewReviewsBttn.frame.size.height / 2
-//        viewReviewsBttn.layer.borderWidth = 2.0
-//        myButtonRatingDesign.layer.cornerRadius = myButtonRatingDesign.frame.size.height / 2
-//        myButtonRatingDesign.layer.borderWidth = 2.0
-//        myButtonBackDesign.layer.cornerRadius = myButtonBackDesign.frame.size.height / 2
-//        myButtonBackDesign.layer.borderWidth = 2.0
+        gradient.frame = viewDesignOne.bounds
+        viewDesignOne.layer.insertSublayer(gradient, at: 0)
+        viewDesignOne.mask = viewReviewsBttn
+        viewReviewsBttn.layer.cornerRadius = 13
+        viewReviewsBttn.layer.borderWidth = 2.0
     }
-    */
     
+    func setMyDesignBttnTwo() {
+        //Все коментарии в SnippetsLab
+        let gradientTwo = CAGradientLayer()
+        gradientTwo.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+        gradientTwo.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientTwo.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradientTwo.frame = viewDesignTwo.bounds
+        viewDesignTwo.layer.insertSublayer(gradientTwo, at: 0)
+        viewDesignTwo.mask = leaveRatingBttn
+        leaveRatingBttn.layer.cornerRadius = 13
+        leaveRatingBttn.layer.borderWidth = 2.0
+    }
+    
+    func setMyDesignBttnThree() {
+        //Все коментарии в SnippetsLab
+        let gradientTwo = CAGradientLayer()
+        gradientTwo.colors = [UIColor.blue.cgColor, UIColor.red.cgColor]
+        gradientTwo.startPoint = CGPoint(x: 0.0, y: 0.5)
+        gradientTwo.endPoint = CGPoint(x: 1.0, y: 0.5)
+        gradientTwo.frame = viewDesignThree.bounds
+        viewDesignThree.layer.insertSublayer(gradientTwo, at: 0)
+        viewDesignThree.mask = BackBttn
+        BackBttn.layer.cornerRadius = 13
+        BackBttn.layer.borderWidth = 2.0
+    }
 }

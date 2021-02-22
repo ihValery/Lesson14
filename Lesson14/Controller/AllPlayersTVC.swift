@@ -2,7 +2,6 @@ import UIKit
 
 class AllPlayersTVC: UIViewController {
 
-    @IBOutlet var myLabelForCell: UILabel!
     @IBOutlet weak var tableView: UITableView!
     
     var player = Player.createPlayer().sorted(by: { $0.rating > $1.rating })
@@ -12,19 +11,10 @@ class AllPlayersTVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         stretchableHeader()
-        // Do any additional setup after loading the view.
-        //self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 }
 
 extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
-    
-    /* порробовать сделать 2 секции для East and West
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-    */
     
     //Позволяет задать количество строк в таблице (count элементов массива задает количество строк)
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,7 +58,6 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func unwindToGoHome(_ unwindSegue: UIStoryboardSegue) {
         //let sourceViewController = unwindSegue.source
-        // Use data from the view controller which initiated the unwind segue
     }
     
     //Настройка анимации у растягивающего заголовка

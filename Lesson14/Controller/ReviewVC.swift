@@ -3,8 +3,8 @@ import UIKit
 class ReviewVC: UIViewController {
 
     @IBOutlet weak var tableReview: UITableView!
-    @IBOutlet var myButton: UIButton!
-    @IBOutlet var myView: UIView!
+    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var myView: UIView!
     
     var player: Player!
     let imegaView = UIImageView()
@@ -34,7 +34,7 @@ class ReviewVC: UIViewController {
         // Волшебство! Установка кнопки в качестве маски myView
         myView.mask = myButton
         // Установка радиуса угла и ширины границы кнопки
-        myButton.layer.cornerRadius = myButton.frame.size.height / 2
+        myButton.layer.cornerRadius = 13
         myButton.layer.borderWidth = 2.0
     }
     

@@ -26,6 +26,4 @@ struct Player {
         }
         return playerS
     }
-    
-    static var player = Player.createPlayer().sorted(by: { $0.rating > $1.rating })
 }
