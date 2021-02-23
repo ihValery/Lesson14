@@ -6,13 +6,16 @@ class ReviewVC: UIViewController {
     @IBOutlet weak var myButton: UIButton!
     @IBOutlet weak var myView: UIView!
     
-    var player: Player!
+    var index: Int!
+    var player: Player {
+        DataPlayers.sharedInstance.players[index]
+    }
     let imegaView = UIImageView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         stretchableHeader()
-        setMyDesignButton()
+//        setMyDesignButton()
     }
     
     @IBAction func backButtonAction() {
@@ -57,14 +60,14 @@ class ReviewVC: UIViewController {
 extension ReviewVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return player.review.count
+        return player.reviews.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cellReview", for: indexPath)
-        let tempIndex = player.review[indexPath.row]
+        let tempIndex = player.reviews[indexPath.row]
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = tempIndex
+        cell.textLabel?.text = tempIndex.text
         switch indexPath.row.isMultiple(of: 2) {
             case false:
                 cell.backgroundColor = .systemGray5

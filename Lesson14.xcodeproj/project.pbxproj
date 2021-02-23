@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		804E179D25E243FE005E6A70 /* Forever Freedom Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 804E179C25E243FE005E6A70 /* Forever Freedom Outline.ttf */; };
+		800FA61C25E5316500204A11 /* CellManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800FA61B25E5316500204A11 /* CellManager.swift */; };
+		800FA61F25E5391800204A11 /* Forever Freedom Outline.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 800FA61E25E5391300204A11 /* Forever Freedom Outline.ttf */; };
+		800FA62225E5392500204A11 /* Forever Freedom Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 800FA62125E5392500204A11 /* Forever Freedom Regular.ttf */; };
 		8051CD9C25E2B4FA00D374C0 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */; };
 		8051CDA125E2CABA00D374C0 /* RatingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8051CDA025E2CABA00D374C0 /* RatingVC.swift */; };
 		8054473125E043B40015D936 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473025E043B40015D936 /* Player.swift */; };
 		8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8054473625E100310015D936 /* AllPlayersTVC.swift */; };
-		8056E5B125E323DD00601BE2 /* Forever Freedom Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 804E179F25E24480005E6A70 /* Forever Freedom Regular.ttf */; };
 		8056E5B425E3269300601BE2 /* myCustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8056E5B325E3269300601BE2 /* myCustomTableViewCell.swift */; };
 		807D867125E0303A00CB373B /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D867025E0303A00CB373B /* AboutVC.swift */; };
 		807D867525E030C600CB373B /* DataPlayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807D867425E030C600CB373B /* DataPlayers.swift */; };
@@ -24,8 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		804E179C25E243FE005E6A70 /* Forever Freedom Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Forever Freedom Outline.ttf"; path = "../../../../../../Downloads/Forever Freedom/4. Regular Outline/Forever Freedom Outline.ttf"; sourceTree = "<group>"; };
-		804E179F25E24480005E6A70 /* Forever Freedom Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Forever Freedom Regular.ttf"; path = "../../../../../../Downloads/Forever Freedom/2. Regular/Forever Freedom Regular.ttf"; sourceTree = "<group>"; };
+		800FA61B25E5316500204A11 /* CellManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellManager.swift; sourceTree = "<group>"; };
+		800FA61E25E5391300204A11 /* Forever Freedom Outline.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Forever Freedom Outline.ttf"; path = "../../../../../../Library/Fonts/Forever Freedom Outline.ttf"; sourceTree = "<group>"; };
+		800FA62125E5392500204A11 /* Forever Freedom Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Forever Freedom Regular.ttf"; path = "../../../../../../Library/Fonts/Forever Freedom Regular.ttf"; sourceTree = "<group>"; };
 		8051CD9B25E2B4FA00D374C0 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		8051CDA025E2CABA00D374C0 /* RatingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingVC.swift; sourceTree = "<group>"; };
 		8054473025E043B40015D936 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
@@ -53,10 +55,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8054475325E1A2640015D936 /* Model */ = {
+		8020860C25E510A800322E39 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				807D867425E030C600CB373B /* DataPlayers.swift */,
+				800FA61B25E5316500204A11 /* CellManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8054475325E1A2640015D936 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				8054473025E043B40015D936 /* Player.swift */,
 			);
 			path = Model;
@@ -102,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				8054475325E1A2640015D936 /* Model */,
+				8020860C25E510A800322E39 /* Manager */,
 				8054475625E1A29F0015D936 /* View */,
 				8054475525E1A27F0015D936 /* Controller */,
 				80D2B91F25E01EEB002D8BB6 /* System32 */,
@@ -112,8 +123,8 @@
 		80D2B91F25E01EEB002D8BB6 /* System32 */ = {
 			isa = PBXGroup;
 			children = (
-				804E179F25E24480005E6A70 /* Forever Freedom Regular.ttf */,
-				804E179C25E243FE005E6A70 /* Forever Freedom Outline.ttf */,
+				800FA61E25E5391300204A11 /* Forever Freedom Outline.ttf */,
+				800FA62125E5392500204A11 /* Forever Freedom Regular.ttf */,
 				80D2B91625E01E2E002D8BB6 /* Info.plist */,
 				80D2B91325E01E2E002D8BB6 /* LaunchScreen.storyboard */,
 				80D2B91125E01E2E002D8BB6 /* Assets.xcassets */,
@@ -180,10 +191,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8056E5B125E323DD00601BE2 /* Forever Freedom Regular.ttf in Resources */,
+				800FA62225E5392500204A11 /* Forever Freedom Regular.ttf in Resources */,
 				80D2B91525E01E2E002D8BB6 /* LaunchScreen.storyboard in Resources */,
 				80D2B91225E01E2E002D8BB6 /* Assets.xcassets in Resources */,
-				804E179D25E243FE005E6A70 /* Forever Freedom Outline.ttf in Resources */,
+				800FA61F25E5391800204A11 /* Forever Freedom Outline.ttf in Resources */,
 				80D2B91025E01E2B002D8BB6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,6 +215,7 @@
 				8051CDA125E2CABA00D374C0 /* RatingVC.swift in Sources */,
 				8056E5B425E3269300601BE2 /* myCustomTableViewCell.swift in Sources */,
 				8054473725E100310015D936 /* AllPlayersTVC.swift in Sources */,
+				800FA61C25E5316500204A11 /* CellManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
