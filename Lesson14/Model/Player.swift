@@ -1,11 +1,11 @@
-import UIKit
+import Foundation
 
 struct Player {
     var name: String
     let surName: String
-    let avatar: UIImage?
+    let avatar: String
     let number: Int
-    let proFile: String
+//    let proFile: String
     let team: String
     //Вычисляемое свойство (классное применение учимся и используем)
     var rating: Double? {

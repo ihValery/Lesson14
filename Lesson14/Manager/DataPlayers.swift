@@ -2,15 +2,31 @@ import Foundation
 
 class DataPlayers {
     
-    //Static общее для всех объектов класса.
-    //Когда мы определяем любую переменную как статичскую, она прикрепляется к классу, а не к объекту.
+    //Static общее для всех объектов класса. Она прикрепляется к классу, а не к объекту.
+    //Всегда будет находиться в памяти пока мы не закроем приложение.
     static let sharedInstance = DataPlayers()
     
     let ball = "\u{1F3C0}"
     
+    //Этот обект можно создать только через sharedInstance
+    //Что бы нельзя было создать отдельный экземляр (другой объект)
+    private init() {
+        players = [Player(name: "JAMES", surName: "LEBRON", avatar: "JLEBRON", number: 23, team: "LAL"),
+                   Player(name: "CURRY", surName: "STEPHEN", avatar: "CSTEPHEN", number: 30, team: "GSW"),
+                   Player(name: "BUTLER", surName: "JIMMY", avatar: "BJIMMY", number: 22, team: "MIA"),
+                   Player(name: "YOUNG", surName: "TRAE", avatar: "YTRAE", number: 11, team: "ATL")]
+    }
+    var players: [Player]
 }
-    
-    /*
+
+
+
+
+
+
+
+
+/*
     let names = ["JAMES", "CURRY", "DONCIC", "JOKIC", "LEONARD",
                  "DAVIS", "WILLIAMSON", "GEORGE", "WIGGINS", "WOOD",
                  "DURANT", "BEAL", "BUTLER", "IRVING", "YOUNG"]
