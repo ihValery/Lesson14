@@ -7,17 +7,45 @@ class DataPlayers {
     static let sharedInstance = DataPlayers()
     
     let ball = "\u{1F3C0}"
-    
+    var players: [Player]
     //Этот обект можно создать только через sharedInstance
     //Что бы нельзя было создать отдельный экземляр (другой объект)
+    
     private init() {
+//        for index in 0...names.count {
+//            let _ = [Player(name: names[index].capitalized,
+//                                 surName: surNames[index].capitalized,
+//                                 avatar: avatars[index],
+//                                 number: number[index],
+//                                 team: teams[index])]
+//            //                    players.append(player)
+//        }
+//    }
+//
+    
+        
+        
+        
+        
+        
+        
+//        for index in 0...names.count {
+//            let player = Player(name: DataPlayers.sharedInstance.names[index],
+//                                surName: DataPlayers.sharedInstance.surNames[index],
+//                                avatar: DataPlayers.sharedInstance.avatars[index],
+//                                number: DataPlayers.sharedInstance.number[index],
+//                                team: DataPlayers.sharedInstance.teams[index])
+//            players.append(player)
+//        }
+        
+        
+        
         players = [Player(name: "JAMES", surName: "LEBRON", avatar: "JLEBRON", number: 23, team: "LAL"),
                    Player(name: "CURRY", surName: "STEPHEN", avatar: "CSTEPHEN", number: 30, team: "GSW"),
                    Player(name: "BUTLER", surName: "JIMMY", avatar: "BJIMMY", number: 22, team: "MIA"),
                    Player(name: "YOUNG", surName: "TRAE", avatar: "YTRAE", number: 11, team: "ATL")]
     }
-    var players: [Player]
-}
+    //var players: [Player]
 
 
 
@@ -26,7 +54,8 @@ class DataPlayers {
 
 
 
-/*
+
+
     let names = ["JAMES", "CURRY", "DONCIC", "JOKIC", "LEONARD",
                  "DAVIS", "WILLIAMSON", "GEORGE", "WIGGINS", "WOOD",
                  "DURANT", "BEAL", "BUTLER", "IRVING", "YOUNG"]
@@ -89,4 +118,3 @@ class DataPlayers {
                    ["Irving contributed 16 points (7-17 FG, 0-5 3Pt, 2-4 FT), seven rebounds, five assists and one steal in the Nets' 109-98 victory Thursday over the Lakers."],
                    ["Young generated 35 points (10-19 FG, 4-7 3Pt, 11-13 FT), 15 assists, six rebounds and one steal over 36 minutes in Sunday's 123-115 win over the Nuggets.", "Young went for 31 points (10-16 FG, 3-7 FT, 8-9 FT), 11 assists, four rebounds and three steals across 37 minutes of Friday's loss to the Celtics.", "Young scored a game-high 40 points (14-20 FG, 4-9 3Pt, 8-8 FT) while adding eight assists, three rebounds and two steals in 35 minutes during Wednesday's 122-114 win over the Celtics.", "Young supplied 23 points (6-19 FG, 1-4 3Pt, 10-12 FT), eight assists, three rebounds and a steal across 40 minutes in Monday's loss against the Knicks.", "Young logged 15 points (3-9 FG, 9-11 FT), 14 assists and one rebound in Saturday's 125-113 loss to the Pacers."]]
 }
-*/

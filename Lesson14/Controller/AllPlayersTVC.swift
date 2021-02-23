@@ -6,7 +6,7 @@ class AllPlayersTVC: UIViewController {
     
     //var player = Player.createPlayer().sorted(by: { $0.rating > $1.rating })
     let cellManager = CellManager()
-    //Первый раз обратимя, создаться экземпляр и заполниться данными
+    //Первый раз обратимся, создатся экземпляр и заполнится данными
     var player: [Player] {
         return DataPlayers.sharedInstance.players
     }
@@ -71,7 +71,7 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
     
     //Позволяет задать высоту ячейки (к примеру что бы картинка была не огромной)
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  50 //UITableView.automaticDimension
+        return  70 //UITableView.automaticDimension
    }
     
     //Настройка ячейки (Предоставьте объект ячейки для каждой строки) (сравниваем с работой цикла for-in)
