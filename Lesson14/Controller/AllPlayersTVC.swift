@@ -57,6 +57,9 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     @IBAction func unwindToGoHome(_ unwindSegue: UIStoryboardSegue) {
+        //Убрать анимацию
+        navigationController?.popToRootViewController(animated: false)
+        tableView.reloadData()
         //let sourceViewController = unwindSegue.source
     }
     

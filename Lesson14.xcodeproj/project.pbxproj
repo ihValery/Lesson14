@@ -53,10 +53,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8054475325E1A2640015D936 /* Model */ = {
+		8020860C25E510A800322E39 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
 				807D867425E030C600CB373B /* DataPlayers.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		8054475325E1A2640015D936 /* Model */ = {
+			isa = PBXGroup;
+			children = (
 				8054473025E043B40015D936 /* Player.swift */,
 			);
 			path = Model;
@@ -102,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				8054475325E1A2640015D936 /* Model */,
+				8020860C25E510A800322E39 /* Manager */,
 				8054475625E1A29F0015D936 /* View */,
 				8054475525E1A27F0015D936 /* Controller */,
 				80D2B91F25E01EEB002D8BB6 /* System32 */,
