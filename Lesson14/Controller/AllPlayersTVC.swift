@@ -71,7 +71,7 @@ extension AllPlayersTVC: UITableViewDataSource, UITableViewDelegate {
     
     //Позволяет задать высоту ячейки (к примеру что бы картинка была не огромной)
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return  70 //UITableView.automaticDimension
+        return  60 //UITableView.automaticDimension
    }
     
     //Настройка ячейки (Предоставьте объект ячейки для каждой строки) (сравниваем с работой цикла for-in)

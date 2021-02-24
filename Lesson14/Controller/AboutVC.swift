@@ -50,7 +50,7 @@ class AboutVC: UIViewController {
         namePlayer.text = player.name
         surNamePlayer.text = player.surName
         numberPlayer.text = String(player.number)
-//        proFilePlayer.text = player.proFile
+        proFilePlayer.text = player.proFile
         logoTeam.image = UIImage(named: String(player.team))
         if let rating = player.rating {
             ratingPlayer.text = String(repeating: DataPlayers.sharedInstance.ball, count: Int(rating))

@@ -7,54 +7,20 @@ class DataPlayers {
     static let sharedInstance = DataPlayers()
     
     let ball = "\u{1F3C0}"
-    var players: [Player]
+    var players: [Player] = []
     //Этот обект можно создать только через sharedInstance
     //Что бы нельзя было создать отдельный экземляр (другой объект)
-    
     private init() {
-//        for index in 0...names.count {
-//            let _ = [Player(name: names[index].capitalized,
-//                                 surName: surNames[index].capitalized,
-//                                 avatar: avatars[index],
-//                                 number: number[index],
-//                                 team: teams[index])]
-//            //                    players.append(player)
-//        }
-//    }
-//
-    
-        
-        
-        
-        
-        
-        
-//        for index in 0...names.count {
-//            let player = Player(name: DataPlayers.sharedInstance.names[index],
-//                                surName: DataPlayers.sharedInstance.surNames[index],
-//                                avatar: DataPlayers.sharedInstance.avatars[index],
-//                                number: DataPlayers.sharedInstance.number[index],
-//                                team: DataPlayers.sharedInstance.teams[index])
-//            players.append(player)
-//        }
-        
-        
-        
-        players = [Player(name: "JAMES", surName: "LEBRON", avatar: "JLEBRON", number: 23, team: "LAL"),
-                   Player(name: "CURRY", surName: "STEPHEN", avatar: "CSTEPHEN", number: 30, team: "GSW"),
-                   Player(name: "BUTLER", surName: "JIMMY", avatar: "BJIMMY", number: 22, team: "MIA"),
-                   Player(name: "YOUNG", surName: "TRAE", avatar: "YTRAE", number: 11, team: "ATL")]
+        for i in 0..<names.count {
+            let player = Player(name: names[i],
+                                surName: surNames[i],
+                                avatar: avatars[i],
+                                number: number[i],
+                                proFile: profile[i],
+                                team: teams[i])
+            players.append(player)
+        }
     }
-    //var players: [Player]
-
-
-
-
-
-
-
-
-
 
     let names = ["JAMES", "CURRY", "DONCIC", "JOKIC", "LEONARD",
                  "DAVIS", "WILLIAMSON", "GEORGE", "WIGGINS", "WOOD",
