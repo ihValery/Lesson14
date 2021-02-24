@@ -6,4 +6,4 @@
 - Добавление отзыва
 - Установка рейтинга
 
-<a href="https://ibb.co/CWFCz1K"><img src="https://i.ibb.co/JCP6KBj/all-Star-NBA.png" alt="all-Star-NBA" border="0"></a>
+<a href="https://ibb.co/kKpC38g"><img src="https://i.ibb.co/WnQJDyW/all-Star-NBA.jpg" alt="all-Star-NBA" border="0"></a>
