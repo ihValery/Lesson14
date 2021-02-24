@@ -5,7 +5,7 @@ struct Player {
     let surName: String
     let avatar: String
     let number: Int
-//    let proFile: String
+    let proFile: String
     let team: String
     //Вычисляемое свойство (классное применение учимся и используем)
     var rating: Double? {
@@ -20,6 +20,7 @@ struct Player {
         }
     }
     var reviews: [Review] = []
+
 }
 
 struct Review {
