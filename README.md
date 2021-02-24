@@ -6,4 +6,4 @@
 - Добавление отзыва
 - Установка рейтинга
 
-<a href="https://ibb.co/xs5VF6h"><img src="https://i.ibb.co/rtyndHk/Simulator-Screen-Shot-i-Phone-12-Pro-2021-02-22-at-16-51-09.png" alt="Simulator-Screen-Shot-i-Phone-12-Pro-2021-02-22-at-16-51-09" border="0"></a>
+<a href="https://ibb.co/CWFCz1K"><img src="https://i.ibb.co/JCP6KBj/all-Star-NBA.png" alt="all-Star-NBA" border="0"></a>
